@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo "A resource should be created on '$RESOURCE' but I don't know how to do it"

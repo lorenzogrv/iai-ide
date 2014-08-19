@@ -1,0 +1,49 @@
+#!/bin/bash
+
+SAVES_TO=$DIR
+
+clear
+echo "/**"
+echo " * # __title or name of the__ boilerplate #"
+echo " *"
+echo " * __Description of the boilerplate.__"
+echo " *"
+echo " * __Include what the boilerplate will do in the description.__"
+echo " *"
+echo " * __Boilerplates are scripts that create resources.__"
+echo " * __This example boilerplate creates other boilerplate scripts.__"
+echo " *"
+echo " * The resource will be saved as a directory on $SAVES_TO"
+echo " */"
+echo
+
+#
+# reads the resource name
+
+read_name () {
+  read -p "resource_name: " NAME
+  RESOURCE="${SAVES_TO}/$(echo $RESOURCE | tr " " "\ ")"
+  if [ -a $RESOURCE ]
+  then
+    echo "resource_name '$NAME' already exists."
+    read_name
+  fi
+}
+
+#
+# actions of the boilerplate
+
+read_name
+
+echo
+echo "New boilerplate will be saved to $RESOURCE"
+read -p "Press any key to proceed or Ctrl^C to abort..." -n 1 -s
+cp "$BASH_SOURCE" "$RESOURCE"
+
+echo
+echo "New boilerplate will be opened on vim"
+read -p "Press any key to continue..." -n 1 -s
+vim $RESOURCE
+
+echo
+

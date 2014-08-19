@@ -1,0 +1,35 @@
+{
+  "name": "iai-ide",
+  "version": "0.0.0",
+  "description": "Interactive shell-based ide for developing iai based node.js applications",
+  "main": "program.js",
+  "dependencies": {
+    "prompt": "~0.2.12",
+    "pty.js": "^0.2.4",
+    "swig": "~1.2.2"
+  },
+  "devDependencies": {
+    "run": "~1.2.0",
+    "minimatch": "~0.2.14"
+  },
+  "bin": {
+    "iai": "bin/iai-ide"
+  },
+  "scripts": {
+    "test": "node --debug bootstrap.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/laconbass/iai-ide"
+  },
+  "keywords": [
+    "iai",
+    "ide"
+  ],
+  "author": "Lorenzo García Rivera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laconbass/iai-ide/issues"
+  },
+  "homepage": "https://github.com/laconbass/iai-ide"
+}

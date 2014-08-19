@@ -1,0 +1,13 @@
+{
+  "title": "Main menu",
+  "message": "Welcome",
+  "keymap": {
+    "q": "util.exit",
+    "v": "vim",
+    "w": "vim view",
+    "e": "vim operation",
+    "a": "util.cd ..",
+    "d": "util.cd",
+    "p": "view package"
+  }
+}

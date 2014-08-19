@@ -1,0 +1,10 @@
+{
+  "title": "Package menu",
+  "message": "Showing the package info at cwd. Tell me what to do:",
+  "operation": "package",
+  "keymap": {
+    "q": "view home",
+    "v": "vim package.json",
+    "e": "package.explore"
+  }
+}

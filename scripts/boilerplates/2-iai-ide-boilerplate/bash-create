@@ -1,0 +1,5 @@
+#!/bin/bash
+
+
+echo -n "Copy files to new resource directory... "
+cp -r $(dirname "$BASH_SOURCE")/empty-boilerplate/* $RESOURCE && echo "OK" || echo "FAIL"
